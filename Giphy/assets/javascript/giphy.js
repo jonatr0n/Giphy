@@ -29,17 +29,24 @@ $(document).on('click', '.button', function () {
         .done(function (response) {
             console.log(response);
             for (var i = 0; i < response.data.length; i++) {
+                //add class
                 var pokeDiv = $('<div class=\"poke-item\">');
+                
+                //add and text ratings
                 var rating = response.data[i].rating;
                 var p = $('<p class="rating">').text('Rating: ' + rating); //might have issue
                 var animated = response.data[i].images.fixed_height.url;
                 var still = response.data[i].images.fixed_height_still.url;
+                
+                //image handlers
                 var image = $('<img>');
                 image.attr('src', still);
                 image.attr('data-still', still);
                 image.attr('data-animated', animated);
                 image.attr('data-state', 'still');
                 image.addClass('pokeImage');
+                
+                //apend poke div's
                 pokeDiv.append(p);
                 pokeDiv.append(image);
                 $('#gif-here').append(pokeDiv);
