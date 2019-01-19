@@ -18,7 +18,7 @@
     padding-top: 20px;
     padding-left: 10px;
     margin-top: 20px;
-    text-align:center;
+    text-align: center;
 }
 
 #container {
@@ -39,4 +39,15 @@ body {
 .row {
     text-align: center;
     display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+.rating {
+    color: white;
+    font: bold 5px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#buttons {
+    font-family: 'Oswald', sans-serif;
 }
